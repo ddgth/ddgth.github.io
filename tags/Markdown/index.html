@@ -194,6 +194,21 @@
     <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
     <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
     
+        <!-- algolia -->
+        <script>
+            
+            var hits = JSON.parse('{"per_page":10}')
+            var labels = JSON.parse('{"input_placeholder":"Search for Posts","hits_empty":"We did not find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}')
+
+            var algolia = {
+                applicationID: '5OKAECDW10',
+                apiKey: '4aaa26e3aa6f71b023b87044e0a65e8f',
+                indexName: 'prod_ddgth',
+                hits: hits,
+                labels: labels
+            }
+        </script>
+    
     <!-- fancybox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
     <!-- 百度统计  -->
@@ -356,7 +371,12 @@
 标签分类在编辑区任意行的列首位置输入以下代码给文稿标签：
 标签： 数学 英语 Markdown
 或者
-Tags： 数学 ...
+Tags： 数学 英语 Markdown
+删除线使用 ~~ 表示删除线
+这是一段错误的文本。
+注脚使用 [^keyword] 表示注脚。
+这是一个注脚[^footnote]的样例。
+这是第二个注脚[^footnote2...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -389,7 +409,11 @@ Tags： 数学 ...
 示例：
 这是 斜体， 这是 粗体
 分级标题在文字下一行使用  = 表示一级标题， 使用 - 表示二级标题。
-你也可以选择在行收加井号表示不同级别的...
+你也可以选择在行收加井号表示不同级别的标题（H1-H6），例如 # H1, ## H2, ### H3, #### H4。
+示例：
+12345678这是一个一级标题=这是一个二级标题-### 这是一个三级标题
+
+外连接使用 [描述](链接...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -582,6 +606,10 @@ Tags： 数学 ...
         </div>
         <!-- search  -->
         
+            <div class="site-search popup-trigger">
+                <span class="iconfont-archer search-icon">&#xe627;</span>
+            </div>
+        
     </div>
     
     <div class="post-archive">
@@ -688,6 +716,29 @@ jsonContent:
     </script>
     <script src="/scripts/main.js"></script>
     <!-- algolia -->
+    
+        <div class="site-search">
+  <div class="algolia-popup popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="iconfont-archer">&#xe609;</i>
+    </span>
+  </div>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js" defer></script>
+        <script src="/scripts/search.js" defer></script>
     
     <!-- busuanzi  -->
     
