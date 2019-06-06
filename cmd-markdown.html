@@ -11,7 +11,7 @@
 
 
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="author" content="Dongdong Tong">
     <meta name="renderer" content="webkit">
@@ -198,7 +198,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
     <!-- 百度统计  -->
     
-    <!-- 谷歌统计  -->
+    <!-- 谷歌统计  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </head>
 
@@ -206,7 +206,7 @@
         <body class="post-body">
     
     
-<header class="header">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -401,14 +401,13 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h3><p>使用 * 和 ** 表示斜体和粗体。</p>
+        <h3 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h3><p>使用 <em> 和 *</em> 表示斜体和粗体。</p>
 <p>示例：</p>
 <p>这是 <em>斜体</em>， 这是 <strong>粗体</strong></p>
 <h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><p>在文字下一行使用  = 表示一级标题， 使用 - 表示二级标题。</p>
 <p>你也可以选择在行收加井号表示不同级别的标题<br>（H1-H6），例如 # H1, ## H2, ### H3, #### H4。</p>
 <p>示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 这是一个一级标题</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 这是一个二级标题</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 这是一个三级标题</span><br></pre></td></tr></table></figure>
-
 <h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><p>使用 [描述](链接地址) 为文字增加外连接</p>
 <p>示例：</p>
 <p>这是去往 <a href="https://weibo.com/234686522" target="_blank" rel="noopener">本人微博</a> 的链接。</p>
@@ -443,7 +442,8 @@ height:50vh;
 <p>让我们聊聊 <code>html</code>。</p>
 <h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>使用 四个缩进空格 表示代码块</p>
 <p>示例：</p>
-<pre><code>这是一个代码块，此行左侧有四个不可见的空格。</code></pre><h3 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h3><p>使用 ![描述](图片链接地址) 插入图像</p>
+<pre><code>这是一个代码块，此行左侧有四个不可见的空格。
+</code></pre><h3 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h3><p>使用 ![描述](图片链接地址) 插入图像</p>
 <p><img src="/avatar/bear.png" alt="我的头像"></p>
 
     </article>
@@ -493,7 +493,7 @@ height:50vh;
         verify:false, 
         appId: "SIURW1yAQHmkt5TnKXI1QdV3-gzGzoHsz",
         appKey: "KvwCWHjmmKOfwHmHIcQzwXqf",
-        placeholder: "JUST DO IT!",
+        placeholder: "ヾﾉ≧∀≦)o 来呀！吐槽一番吧！",
         path:window.location.pathname, 
         avatar:'mm' 
     });
@@ -818,7 +818,22 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":112,"height":225},"mobile":{"show":false},"log":false});</script></body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":112,"height":225},"mobile":{"show":false},"log":false});</script></body>
 </html>
 
 
